@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Preview – LegalEase</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="preview">
+  <main class="wrap">
+    <h1 id="doc-title">Document</h1>
+    <span id="doc-status" class="badge draft">draft</span>
+
+    <div class="bar">
+      <button class="btn ghost" id="edit-btn" type="button">✏ Edit</button>
+      <button class="btn ghost" id="save-btn" type="button" disabled>💾 Save</button>
+      <button class="btn ghost" id="regen-btn" type="button">↻ Regenerate</button>
+      <button class="btn ghost" id="sign-btn" type="button">✍ Sign</button>
+      <button class="btn" id="pdf-btn" type="button">⬇ Download PDF</button>
+    </div>
+    <p id="page-msg" class="msg" role="alert" hidden></p>
+
+    <article class="sheet">
+      <textarea id="doc-content" aria-label="Document content" readonly></textarea>
+      <div id="sig-box" hidden>
+        <img id="sig-img" alt="Your signature">
+        <p id="sig-caption" class="help"></p>
+      </div>
+    </article>
+
+    <p class="help">The signature feature is a demonstration only and is not guaranteed to be legally valid in every jurisdiction.</p>
+    <p class="disclaimer" data-disclaimer></p>
+  </main>
+
+  <dialog id="sig-dialog" aria-labelledby="sig-heading">
+    <h2 id="sig-heading">Draw your signature</h2>
+    <p class="help">Demonstration e-signature. Use your mouse or finger.</p>
+    <canvas id="sig-canvas" width="400" height="150"></canvas>
+    <p id="sig-msg" class="msg" role="alert" hidden></p>
+    <div class="bar">
+      <button class="btn ghost" id="sig-clear" type="button">Clear</button>
+      <button class="btn" id="sig-save" type="button">Save signature</button>
+      <button class="btn ghost" id="sig-cancel" type="button">Cancel</button>
+    </div>
+  </dialog>
+
+  <div id="overlay" class="overlay" role="status" hidden>
+    <div class="spinner"></div>
+    <p id="overlay-text">Working…</p>
+  </div>
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard – LegalEase</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="dashboard">
+  <main class="wrap">
+    <h1>Welcome to <span class="gold">LegalEase</span></h1>
+    <div class="bar">
+      <a class="btn" href="create-document.html">+ Create New Document</a>
+      <input id="search" type="search" placeholder="Search documents…" aria-label="Search documents">
+    </div>
+    <p id="page-msg" class="msg" role="alert" hidden></p>
+    <h2>Recent Documents</h2>
+    <div class="scroll">
+      <table class="tbl">
+        <thead><tr><th>Document Name</th><th>Type</th><th>Status</th><th>Date</th><th>Action</th></tr></thead>
+        <tbody id="doc-rows"></tbody>
+      </table>
+    </div>
+    <p id="empty" class="help" hidden>No documents found. Create your first one!</p>
+    <p class="disclaimer" data-disclaimer></p>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>

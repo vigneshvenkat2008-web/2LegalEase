@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Document – LegalEase</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="create">
+  <main class="wrap">
+    <h1>Create a <span class="gold">Document</span></h1>
+    <p class="help">Choose a document type, enter your requirements, and LegalEase will draft it for you.</p>
+    <p id="page-msg" class="msg" role="alert" hidden></p>
+    <div id="types" class="grid"></div>
+
+    <form id="doc-form" class="card" novalidate hidden>
+      <h2 id="form-title"></h2>
+      <div id="fields"></div>
+      <p id="form-msg" class="msg" role="alert" hidden></p>
+      <div class="bar"><button class="btn" id="generate-btn" type="submit">Generate Draft</button></div>
+    </form>
+
+    <p class="disclaimer" data-disclaimer></p>
+  </main>
+
+  <div id="overlay" class="overlay" role="status" hidden>
+    <div class="spinner"></div>
+    <p>🤖 LegalEase is preparing your document…</p>
+  </div>
+  <script src="../script.js"></script>
+</body>
+</html>

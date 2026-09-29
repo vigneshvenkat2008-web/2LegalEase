@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login – LegalEase</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="login">
+  <main class="wrap auth">
+    <div class="card fade">
+      <h1 id="auth-title">Welcome back</h1>
+      <p class="help">Log in to create and manage your document drafts.</p>
+      <form id="auth-form" novalidate>
+        <div id="name-row" hidden>
+          <label for="full_name">Full name</label>
+          <input id="full_name" autocomplete="name">
+        </div>
+        <label for="email">Email</label>
+        <input id="email" type="email" autocomplete="email" required>
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" minlength="8" required>
+        <p id="form-msg" class="msg" role="alert" hidden></p>
+        <div class="bar"><button class="btn" id="auth-submit" type="submit">Login</button></div>
+      </form>
+      <p class="help"><span id="switch-text">New to LegalEase?</span> <a href="#" id="switch-link">Register</a></p>
+      <p class="disclaimer" data-disclaimer></p>
+    </div>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>
